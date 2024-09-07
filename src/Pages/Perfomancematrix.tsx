@@ -12,7 +12,7 @@ const data = [
   { name: "Out for delivery", value: 40 },
 ];
 
-const COLORS = ["#8B4513", "#A0522D", "#CD853F", "#DEB887", "#F4A460"];
+const COLORS = ["#5E4200", "#956F00", " #E5A500", "#FFC879", "#FFDDB6"];
 
 export default function PerformanceDashboard() {
   return (
@@ -115,7 +115,7 @@ export default function PerformanceDashboard() {
               {data.map((entry, index) => (
                 <div key={entry.name} className="flex items-center">
                   <div
-                    className="w-3 h-3 rounded-full mr-2 flex-shrink-0"
+                    className="w-6 h-3 rounded-full mr-2 flex-shrink-0"
                     style={{ backgroundColor: COLORS[index % COLORS.length] }}
                   ></div>
                   <span className="text-xs">{entry.name}</span>
@@ -132,7 +132,7 @@ export default function PerformanceDashboard() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <ul className="space-y-2 text-xs sm:text-sm">
+            <ul className="space-y-5 text-xs sm:text-sm">
               <li>
                 There are 8 shipments that have been in out for delivery for
                 more than 3 days.
@@ -140,7 +140,7 @@ export default function PerformanceDashboard() {
               <li>There are 5 shipments in exception right now.</li>
               <li>The maximum chargebacks are from Miami.</li>
             </ul>
-            <Button className="mt-4 w-full text-xs sm:text-sm bg-white text-[#B8860B] hover:bg-gray-100">
+            <Button className="mt-36 w-full text-xs sm:text-sm bg-white text-[#B8860B] hover:bg-gray-100">
               Check Orders Page
             </Button>
           </CardContent>
@@ -153,27 +153,27 @@ export default function PerformanceDashboard() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="mb-4 text-xs sm:text-sm">
+            <p className="mb-10 text-xs sm:text-sm">
               Understand user engagement patterns and optimize your tracking
               page for enhanced customer experiences.
             </p>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-5 ">
               <Card className="bg-[#FFDAB9]">
-                <CardContent className="flex items-center justify-between p-4">
-                  <div>
+                <CardContent className="flex items-center justify-between p-5">
+                  <div className="space-y-4">
                     <p className="text-xs font-medium">Orders</p>
                     <p className="text-2xl sm:text-3xl font-bold">80</p>
                   </div>
-                  <Package className="w-6 h-6" />
+                  <Package className="size-14" />
                 </CardContent>
               </Card>
               <Card className="bg-[#FFD700]">
-                <CardContent className="flex items-center justify-between p-4">
-                  <div>
+                <CardContent className="flex items-center justify-between p-5">
+                  <div className="space-y-4">
                     <p className="text-xs font-medium">Tracking Page Views</p>
                     <p className="text-2xl sm:text-3xl font-bold">44</p>
                   </div>
-                  <Eye className="w-6 h-6" />
+                  <Eye className="size-14" />
                 </CardContent>
               </Card>
             </div>

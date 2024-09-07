@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { StarIcon, BoltIcon } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -7,16 +6,21 @@ import {
   CardTitle,
 } from "../components/ui/card";
 import { Input } from "@/components/ui/input";
+import PaypalIcon from "@/assets/IconComponenets/PaypalIcon";
+import { InstagramIcon } from "@/assets/IconComponenets/InstgramIcon";
+import GAnalyticsIcon from "@/assets/IconComponenets/GoogleAnalytics";
+import ShopifyIcon from "@/assets/IconComponenets/ShopifyIcon";
+import AliIcon from "@/assets/IconComponenets/AliIcon";
 
 export default function FunctionalityShowcase() {
   return (
     <div className="container mx-auto p-6">
-      <h1 className="text-xl font-bold mb-6">
+      <h1 className="text-2xl font-bold my-10">
         Discover the Heart of Our Functionality
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 auto-rows-auto  gap-6">
-        <Card className="md:col-span-1 row-span-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-10 auto-rows-auto  gap-6">
+        <Card className="lg:col-span-3 lg:row-span-3">
           <CardHeader>
             <CardTitle>
               Elevate Your Brand Aesthetics with Custom Tracking Page Styles
@@ -39,9 +43,9 @@ export default function FunctionalityShowcase() {
                   <Input
                     id="accent-color"
                     defaultValue="FF9898"
-                    className="mr-2"
+                    className="mr-3"
                   />
-                  <div className="w-6 h-6 bg-[#FF9898] rounded"></div>
+                  <div className="w-20 h-7 bg-[#FF9898] rounded-md "></div>
                 </div>
               </div>
               <div>
@@ -55,9 +59,9 @@ export default function FunctionalityShowcase() {
                   <Input
                     id="text-color"
                     defaultValue="571010"
-                    className="mr-2"
+                    className="mr-3"
                   />
-                  <div className="w-6 h-6 bg-[#571010] rounded"></div>
+                  <div className="w-20 h-7 bg-[#571010] rounded-md"></div>
                 </div>
               </div>
               <div>
@@ -69,7 +73,7 @@ export default function FunctionalityShowcase() {
                 </label>
                 <div className="flex items-center mt-1">
                   <Input id="bg-color" defaultValue="FFEAEA" className="mr-2" />
-                  <div className="w-6 h-6 bg-[#FFEAEA] rounded"></div>
+                  <div className="w-20 h-7 bg-[#FFEAEA] rounded-md"></div>
                 </div>
               </div>
               <div className="flex justify-between">
@@ -80,7 +84,7 @@ export default function FunctionalityShowcase() {
           </CardContent>
         </Card>
 
-        <Card className="md:col-span-2 row-span-1">
+        <Card className="lg:col-span-4 lg:row-span-1">
           <CardHeader>
             <CardTitle>
               Exclusive Onboarding Support for High-Volume Brands
@@ -95,7 +99,7 @@ export default function FunctionalityShowcase() {
           </CardContent>
         </Card>
 
-        <Card className="md:col-span-2 row-span-1">
+        <Card className="lg:col-span-4 lg:row-span-2">
           <CardHeader>
             <CardTitle>Explore Our Integrated Ecosystem</CardTitle>
           </CardHeader>
@@ -104,15 +108,18 @@ export default function FunctionalityShowcase() {
               Discover a variety of popular integrations tailored for your
               convenience.
             </p>
-            <div className="flex space-x-4 mb-10">
-              <StarIcon className="w-8 h-8 text-orange-500" />
-              <BoltIcon className="w-8 h-8 text-pink-500" />
+            <div className="flex space-x-5 mb-10 items-center">
+              <PaypalIcon />
+              <AliIcon />
+              <InstagramIcon />
+              <GAnalyticsIcon />
+              <ShopifyIcon />
             </div>
             <Button>Explore Integrations</Button>
           </CardContent>
         </Card>
 
-        <Card className="md:col-span-1 ">
+        <Card className="lg:col-span-3 lg:row-span-3 lg:col-start-8 lg:row-start-1 ">
           <CardHeader>
             <CardTitle>Seamlessly Integrate Custom HTML Elements</CardTitle>
           </CardHeader>
@@ -130,11 +137,15 @@ export default function FunctionalityShowcase() {
                 >
                   HTML Link
                 </label>
-                <Input id="html-link" placeholder="Value" className="mt-1" />
+                <Input
+                  id="html-link"
+                  placeholder="Value"
+                  className="my-2 h-36"
+                />
               </div>
               <div className="flex justify-between">
                 <Button variant="outline">Preview</Button>
-                <Button>Apply changes</Button>
+                <Button className="text-xs">Apply changes</Button>
               </div>
             </div>
           </CardContent>
